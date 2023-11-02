@@ -1,0 +1,179 @@
+<nav class=" cann container-fluid oo bar navbar navbar-expand-lg navbar-light bg-light">
+  <div class="co">
+
+    <a class="on navbar-brand" href="{%url 'list'%}">venta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="ap nav-link" >
+            <select class="op">
+              <option>India</option>
+              <option>Usa</option>
+              <option>China</option>
+            </select></a>
+          </li>
+          <form class="fo form-inline my-2 my-lg-0" action="{% url 'search'%}" method="get">
+            <input class="sea form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+          
+           <button class="by btn-outline-success my-2 my-sm-0 io" type="submit"><div data-aut-id="btnSearch" class="_3jHVg"><span><svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-o3KKi" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path></svg></span></div></button>
+          </form>
+          <li class=" engli nav-item">
+            <select class="eng">
+              <option>ENGLISH</option>
+              <option>HINDI</option>
+              
+            </select></a>
+            
+          </li>
+          <li class="nav-item">
+            
+            
+          </li>
+          <li class=" san sel nav-item">
+            {% if user.is_authenticated %}
+            
+            <a href="{% url 'list' %}"> <button class="proo" >profile</button></a>
+            <a href="lot"> <button  class="bon">logout</button ></a>
+            {% else %}
+            <a class="LIN" href="{% url 'lin'%}">login</a>
+            <a class="LIN" href="{% url 'reg'%}">register</a>
+            {%endif%}
+            <a rel="nofollow" data-aut-id="btnChat" aria-current="page" class="TbiMb wrR_a " href="/en-in/nf/chat">
+              <button type="button" class="rui-3a8k1 rui-ByR9G" role="button" tabindex="0" data-aut-id="" title="chat">
+                <svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd">
+                  <path class="rui-w4DG7" d="M469.333 171.119c-164.693 0-298.667 134.684-298.667 300.25v359.529l108.907-54.753 19.093-4.525h256c164.693 0 298.667-134.684 298.667-300.25s-133.973-300.25-298.667-300.25h-85.333zM147.093 938.667l-61.76-38.368v-428.929c0-212.856 172.267-386.036 384-386.036h85.333c211.733 0 384 173.18 384 386.036s-172.267 386.036-384 386.036h-245.931l-161.643 81.261z"></path></svg></button></a>
+                <a class=" st nav-link disabled" href="#">Sell</a>
+           </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+          
+          
+          
+          
+  <div class="topnav">
+    <a class="active" href="{% url 'cat'%}"> ALL CATEGORY</a>
+    <a href="#news">Motorcycle</a>
+    <a href="#contact">Mobile Phone</a>
+    <a href="#sale">For Sale: Houses & Apartments</a>
+    <a href="#scooter">Scooters</a>
+    <a href="#veh">Commercial & Other Vehicles</a>
+    <a href="#rent">For Rent: Houses & Apartments</a>
+  </div>
+
+
+
+
+
+
+
+<style>
+  
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .bon{
+    width: 70px;
+    border-radius: 5px;
+  }
+  .proo{
+    width: 70px;
+    border-radius: 5px;
+  }
+  .san{
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .fo{
+    position: relative;
+    top: 10px;
+    height: 45px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+  }
+  .on{
+    position: relative;
+    top: 10px;
+    font-weight: 900;
+    
+  }
+  .co{
+    
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    height: 60px;
+  }
+ 
+  .sel{
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .engli{
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+  .eng{
+    
+    border: none;
+    background-color: rgb(248, 247, 247);
+  }
+  .active{
+    font-weight: 500;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .io{
+    width: 50px;
+  }
+  .op{
+    width: 200px;
+    height: 40px;
+    
+  }
+  .bar {
+    gap: 20px;
+  }
+
+  .topnav a {
+  
+    color: #0b0a0a;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+   
+  }
+  .ap{
+   
+    
+    border-radius: 5px;
+    border: 1px solid rgb(189, 189, 189);
+    font-size: 20px;
+  }
+  .by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+  .sea{
+    width: 100%;
+  }
+ 
+</style>

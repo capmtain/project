@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+
+
+
+<div class="full">
+    <div class="imgs">
+
+        
+        <img src="/ecommerce/{{dx.image.url}}" class="img">
+        <img src="/ecommerce/{{dx.image1.url}}" class="img   ">
+        <img src="/ecommerce/{{dx.image2.url}}" class="img">
+    </div>
+    
+    
+    <div class="c">
+    
+        <span class="sp">&#8377;<p>{{dx.price}}</p></span>
+        <p>{{dx.des}}</p>
+        <p class="addr">{{dx.addr}}</p>
+
+      </div>
+    </div>
+    <p class="det">{{dx.detail}}</p>
+
+
+<style>
+    .c{
+        height: 200px;
+        border-radius: 5px; 
+        border: 2px solid grey;
+        margin-left: 50px;
+    }
+    .det{
+        border-radius: 5px; 
+        border: 2px solid grey;
+        margin-top: 10px;
+        width: 640px;
+    }
+    .addr{
+        width: 200px;
+    }
+  
+    .sp{
+        font-size: 45px;
+        display: flex;
+        flex-direction: row;
+        font-weight: 700;
+       
+    }
+    .full{
+        margin-right: 50px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        
+
+    }
+    .imgs{
+        border-radius: 5px; 
+        border: 2px solid grey;
+        gap: 10px;
+        width: 640px;
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        overflow-y: hidden;
+       
+    }
+    .img{
+      
+        border: 150px solid black;
+        border-top: 0px;
+        border-bottom: 0px;
+        height: 450px;
+        width: 800px;
+    }
+ 
+</style>
+
+{% endblock %}

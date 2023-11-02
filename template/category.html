@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+{% load static%}
+
+
+
+{% block content %}
+<div class="caa">
+
+    
+    <a href="{%url 'cars'%}"> <img class="im" src="{% static 'images\car2.jpeg'%}" ></a>
+    <a href="{%url 'prop'%}"> <img class="im" src="{% static 'images\house2.webp'%}" ></a>
+    <a href="{%url 'bike'%}"><img class="im" src="{% static 'images\bike1.jpeg'%}" ></a>
+    <a href="{%url 'mobiles'%}"><img class="im" src="{% static 'images\phone1.webp'%}" ></a>
+    <a href="{%url 'ele'%}"><img class="im" src="{% static 'images\elect1.png'%}" ></a>
+    <a href="{%url 'fur'%}"><img class="im" src="{% static 'images\fur1.jpeg'%}" ></a>
+</div>
+
+<style>
+    .im{
+        position: relative;
+       
+        height: 100px;
+        width: 100px;
+    }
+    a{
+        
+        text-decoration: none;
+    }
+   .caa{
+    gap: 80px;
+    display: flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: 10px;
+       overflow: scroll ;
+       overflow-y: hidden;
+     right: 200px;
+       margin-left: 500px;
+        
+    
+   }
+    .cat{
+        
+        position: relative;
+        top: 12px;
+        color: rgb(255, 255, 255);
+       font-size: 20px;
+       
+    }
+    
+</style>
+{%endblock%}
+

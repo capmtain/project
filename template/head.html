@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="maindiv">
+        <a class="LIN" href="{% url ''%}"> <h1 class="f1">Venta</h1></a>
+       
+        <select class="op">
+            <option>Kerala</option>
+            <option>Tamil Nadu</option>
+            <option>Karnataka</option>
+        </select>
+          <form class="fo " action="{% url 'search'%}" method="get">
+              <input class="t"type="text"name="search" placeholder="search">       
+              <button class="by btn-outline-success my-2 my-sm-0 io" type="submit"><div data-aut-id="btnSearch" class="_3jHVg"><span><svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-o3KKi" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path></svg></span></div></button>
+            </form>
+            <select class="eng">
+              <option>ENGLISH</option>
+              <option>HINDI</option>
+              
+            </select>
+            <div class="prolog">
+                {% if user.is_authenticated %}
+            
+                <a href="{% url 'list' %}"> <button class="proo" >Profile</button></a>
+                <a href="lot"> <button  class="bon">Logout</button ></a>
+                {% else %}
+                <a class="LIN" href="{% url 'lin'%}">Login</a>
+                <a class="LIN" href="{% url 'reg'%}">Register</a>
+                {%endif%}
+                <a rel="nofollow" data-aut-id="btnChat" aria-current="page" class="TbiMb wrR_a " href="/en-in/nf/chat">
+                  <button type="button" class="rui-3a8k1 rui-ByR9G" role="button" tabindex="0" data-aut-id="" title="chat">
+                    <svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd">
+                      <path class="rui-w4DG7" d="M469.333 171.119c-164.693 0-298.667 134.684-298.667 300.25v359.529l108.907-54.753 19.093-4.525h256c164.693 0 298.667-134.684 298.667-300.25s-133.973-300.25-298.667-300.25h-85.333zM147.093 938.667l-61.76-38.368v-428.929c0-212.856 172.267-386.036 384-386.036h85.333c211.733 0 384 173.18 384 386.036s-172.267 386.036-384 386.036h-245.931l-161.643 81.261z"></path></svg></button></a>
+                <a class=" add" href="#">+</a>
+            </div>
+
+    </div>
+            
+  <div class="topnav">
+    <a class="active" href="{% url 'cat'%}"> ALL CATEGORY</a>
+    <a href="{% url 'bike'  %}">Motorcycle</a>
+    <a href="{% url 'mobiles'%}">Mobile Phone</a>
+    <a href="{% url 'prop'%}">For Sale: Houses & Apartments</a>
+    <a href="{% url 'fur'%}">Furnitures</a>
+    <a href="#veh">Commercial & Other Vehicles</a>
+    
+  </div>
+</body>
+<style>
+    .add{
+        text-decoration: none;
+    }
+    .LIN    {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        text-decoration: none;
+    }
+    .maindiv{
+        background-color:black;
+        padding-top: 10px;
+        padding-left: 50px;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    .bon{
+        width: 70px;
+        border-radius: 5px;
+      }
+      .proo{
+        width: 70px;
+        border-radius: 5px;
+      }
+    .prolog{
+        padding-left: 30px;
+        padding-top: 9px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+    .op{
+        width: 200px;
+        height: 40px;
+        
+      } 
+      .t{
+        width: 350px;
+      }
+   
+  .eng{
+    margin-left: 30px;
+    border-radius: 5px; 
+    margin-top: 10PX;
+    height: 25px;
+    border: none;
+    background-color: rgb(248, 247, 247);
+  }
+      .fo{
+      
+    
+    height: 45px;
+    
+    display: flex;
+    flex-direction: row;
+  }
+    .topnav a {
+  
+        color: #ffffff;
+        text-align: center;
+        left: 140px;
+        padding-left: 20px;
+        text-decoration: none;
+        font-size: 15px;
+        position: relative;
+       
+      }
+      .active{
+        font-weight: 500;}
+</style>
+</html>

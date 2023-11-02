@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+{% load static%}
+
+
+
+{% block content %}
+<div class="car">
+
+{% for i in car %}
+
+    <div class="car1">
+         <a href="{% url 'deta' i.id %}"><img class="imgs" src="/ecommerce/{{i.image.url}}"></a>
+
+        <span>&#8377; <p>{{i.price}}</p></span>
+        <p>{{i.name}}</p>
+        
+        
+    </div>
+
+{%endfor%}
+</div>
+<style>
+    body{
+        width: 100%;
+    }
+    span{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-weight: 500;
+    }
+    p{
+        color: white;
+        position: relative;
+        left: 10px  ;
+    }
+    .car{
+        gap: 50px;
+        margin-left: 350px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+        
+    }
+    .imgs{
+        margin: 10px 10px 10px;
+        width: 280px;
+        height: 150px;
+    }
+    .car1{
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid gray;
+        
+    }
+</style>
+{%endblock%}

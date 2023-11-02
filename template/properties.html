@@ -1,0 +1,58 @@
+{% extends 'base.html'%}
+{% load static%}
+
+
+
+{% block content %}
+<div class="prop">
+
+{% for i in prop%}
+
+    <div class="prop1">
+        <a href="{% url 'detail' i.id %}"><img class="imgs" src="/ecommerce/{{i.image.url}}"></a>
+        
+        
+        <p>{{i.addr}}</p>
+        <p>{{i.price}}</p>
+       
+        
+    </div>
+
+{%endfor%}
+</div>
+<style>
+    .prop{
+        gap: 50px;
+        margin-left: 350px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+        
+    }
+    span{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-weight: 500;
+    }
+    p{
+        color: white;
+        position: relative;
+        left: 10px  ;
+    }
+    .imgs{
+        margin: 10px 10px 10px;
+        width: 280px;
+        height: 150px;
+    }
+    .prop1{
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid gray;
+        
+    }
+</style>
+{%endblock%}

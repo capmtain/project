@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+<form method="post">
+    {%csrf_token%}
+     <h1>Welcome user</h1>
+     <div class="inp">
+
+         <input class="t" placeholder="firstname"{{form.name}}
+         <input class="t" placeholder="contact"{{form.contact}}
+         <input class="t" placeholder="email"{{form.email}}
+        </div>
+<a href="{%url 'list' %}"> <button class="butto">View profile</button></a>
+<input class="sub" type="submit" value="submit">
+    
+<style>
+    .inp{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub{
+        width: 60px;
+        border-radius: 5px;
+        background-color: lightskyblue;
+        position: relative;
+        margin-top: 30px;
+        
+      
+    }
+   .butto{
+    
+    width: 150px;
+    border-radius: 5px;
+      position: relative;
+      
+   }
+    .t{
+        
+        height: 35px;
+        width: 250px;
+       
+       
+            
+        
+    }
+    
+</style>
+{% endblock %}

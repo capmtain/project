@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="img">
+
+
+{% for i in sr %}
+
+    <div class="con">
+
+        <a href="{% url 'detail' i.id %}"> <img class="imgs" src="/ecommerce/{{i.image.url}}">
+        
+       
+       <p>
+        {{i.price}}
+       </p>
+        <p>{{i.des}}</p>
+        <p class="cd">{{i.addr}}</p>
+    </div>
+
+{%endfor%}
+</div>
+<style>
+    a{
+        
+        text-decoration: none;
+    }
+    p{
+        
+        color: rgb(255, 252, 252);
+        width: 200px;
+    }
+    .cd{
+        line-height: 2;
+        height: 40px;
+    }
+    .img{
+       
+        margin-top: 50px;
+        margin-left: 250px;
+        gap: 20px;
+        width: 200;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+       
+    }
+    .con{
+        
+        border-radius: 5px;
+        
+        align-items: center;
+        border: 2px solid gray;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .imgs{
+        border: 10px solid gray;
+        border-width: 5px;
+        
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+        width: 300px;
+        padding: 5px;
+    }
+</style>
+  
+
+
+
+{%endblock%}

@@ -1,0 +1,54 @@
+
+<div class="tan">
+<h1>SIGN UP</h1>
+<form method="post">
+  {%csrf_token%}
+  <div class="tata">
+
+    <input class="t" placeholder="firstname"{{form.first_name}}
+    <input class="t"  placeholder="username"{{form.username}}
+    <input class="t" placeholder="email"{{form.email}}
+    <input class="t" placeholder="password"{{form.password1}}
+    <input class="t" placeholder="confirm password"{{form.password2}} 
+  </div>
+      
+      <input class="t1" type="submit" value="submit">
+    </div>
+
+</form>
+<style>
+  body{
+    background-color: rgb(1, 1, 60);
+  }
+
+  .t1{
+    
+    height: 50px;
+    width: 170px;
+  }
+  .tan{
+    border-radius: 10px;
+    height: 300px;
+    background-color: rgb(1, 1, 95);
+    width: 300px;
+    border: 5px solid rgb(1, 1, 95);
+    color: rgb(255, 255, 255);
+    margin-top: 180px;
+    margin-left: 520px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;    
+   
+  }
+
+  .t{
+    
+height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+</style>

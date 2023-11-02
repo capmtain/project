@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+{% load static%}
+
+
+
+{% block content %}
+<div class="ele">
+
+{% for i in ele%}
+
+    <div class="ele1">
+        <a href="{% url 'deta2' i.id %}"><img class="imgs" src="/ecommerce/{{i.image.url}}"></a>
+        
+        <p class="name">{{i.name}}</p>
+        <p>{{i.price}}</p>
+        
+    </div>
+
+{%endfor%}
+</div>
+<style>
+    body{
+        width: 100%;
+    }
+    .name{
+        width: 300px;
+    }
+    span{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-weight: 500;
+    }
+    p{
+        color: white;
+        position: relative;
+        left: 10px  ;
+    }
+    .ele{
+        gap: 50px;
+        margin-left: 350px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+        
+    }
+    .imgs{
+        margin: 10px 10px 10px;
+        width: 280px;
+        height: 150px;
+    }
+    .ele1{
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid gray;
+        
+    }
+</style>
+{%endblock%}

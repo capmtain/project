@@ -1,0 +1,125 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+
+
+
+<p class="name">{{dt.name}}</p>
+<div class="full">
+    <div class="img1">
+
+        <div class="imgs">
+            
+            
+            <img src="/ecommerce/{{dt.image.url}}" class="img">
+        </div>
+        <div class="img2">
+                
+            <img src="/ecommerce/{{dt.image2.url}}" class="img">
+            <img src="/ecommerce/{{dt.image1.url}}" class="img">
+        </div>
+    </div>
+     
+          
+    
+    
+    <div class="c">
+        <span class="sp">&#8377;<p>{{dt.price}}</p></span>
+       
+        <p class="det">{{dt.detail}}</p>
+        
+    </div>
+</div>
+<div class="full1">
+    <p class="addr">{{dt.addr}}</p>
+
+    <p class="on">{{dt.des}}</p>
+</div>
+
+
+<style>
+     .img1{
+      
+     }
+
+    .name{
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: oblique;
+        font-size: 50px;
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+    .c{
+        
+       
+        height: 100px;
+        
+        position: relative;
+        right: 300px;
+    }
+   
+    .det{
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        background-color: rgb(244, 244, 244);
+        border-radius: 5px; 
+        border: 2px solid rgb(215, 215, 215)grey;
+        margin-top: 10px;
+        height: 30px;
+        
+    }
+    .on{
+        margin-top: 25px;
+        border-radius: 5px; 
+        border: 2px solid grey;
+        width:565px;
+    }
+    .addr{
+        width: 200px;
+    }
+  
+    .sp{
+        color: white;
+        font-size: 45px;
+        display: flex;
+        flex-direction: row;
+        font-weight: 700;
+       
+    }
+    .full1{
+        color: white;
+        margin-left: 50px;
+    }
+    .full{
+        margin-left: 50px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        
+
+    }
+    .imgs{
+        border-radius: 5px; 
+       
+       
+        
+        display: flex;
+        flex-direction: row;
+       
+       
+    }
+    .img{
+        gap: 10px;
+        border-radius: 5px;
+        border-top: 0px;
+        border-bottom: 0px;
+        height: 400px;
+        width: 400px;
+    }
+ 
+</style>
+
+{% endblock %}

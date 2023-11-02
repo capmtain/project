@@ -1,0 +1,150 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+<div class="ig">
+
+    <div class="front">
+
+    </div>
+
+    <div class="img">
+        <a>
+            <div class="imgs">
+                <img class="im" src="{% static 'images\house1.jpg' %}" >
+                <span>&#8377;<p>60,00,000</p></span>
+                <p>2 Bds - 2 Ba - 1050 ft2</p>
+            </div>
+        </a>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\110.jpg'%}">
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\house2.webp'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\house4.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+    </div>    
+    <div class="img">  
+        <div class="imgs">
+            <img class="im" src="{% static 'images\car1.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\sc1.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div> 
+        <div class="imgs">
+            <img class="im" src="{% static 'images\fur1.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div> 
+    </div>
+    <div class="img">
+        <div class="imgs">
+            <img class="im" src="{% static 'images\bike1.jpeg' %}" >
+            <span>&#8377;<p>1,96,732 </p></span>
+            <p>199cc - 34kmpl- 159kg</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\house3.webp'%}">
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\sc2.jpeg'%}" >
+            <span>&#8377;<p>1,29,999</p></span>
+            <p>90
+                km/h
+                Top speed
+                </p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\house5.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div>
+    </div>    
+    <div class="img">  
+        <div class="imgs">
+            <img class="im" src="{% static 'images\car2.jpeg'%}" >
+            <span>&#8377;<p> 46,25,000</p></span>
+            <p>1395 to 1798 cc -Petrol</p>
+        </div>
+        <div class="imgs">
+            <img class="im" src="{% static 'images\fur3.jpeg'%}" >
+            <span>&#8377;<p>60,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div> 
+        <div class="imgs">
+            <img class="im" src="{% static 'images\fur2.jpeg'%}" >
+            <span>&#8377;<p>80,00,000</p></span>
+            <p>2 Bds - 2 Ba - 1050 ft2</p>
+        </div> 
+    </div>
+</div>
+
+<style>
+    .front{
+        background-image: url("{% static 'image\front.jpg' %}");
+    }
+    .img{
+     margin-top: 20px;
+      margin-left: 200px;
+       display: flex;
+       flex-direction: row;
+       gap: 20px;
+       padding-bottom: 20px;
+        
+        
+
+    }
+    .im{
+        border-radius: 5px;
+        height: 200px;
+        width: 200px;
+       
+    }
+    .imgs{
+        
+       
+        display: flex;
+        flex-direction: column;
+    }
+    
+    p{
+        color: white;
+       
+    }
+    span{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-size: large;
+        font-weight: 700;
+    }
+
+
+</style>
+{%endblock%}
+
+
+    
+
+
+
+
+
+
+<!-- {% block link %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{%endblock%} -->
